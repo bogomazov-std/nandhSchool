@@ -1,0 +1,21 @@
+*{
+  box-sizing: border-box;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding: 0;
+}
+
+li:before {
+  content: counter(item) ") ";
+  display: inline-block;
+  counter-increment: item;
+  font-weight: bold;
+}
+
+li {
+  word-wrap: break-word;
+  margin: 10px;
+}
